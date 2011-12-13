@@ -15,7 +15,7 @@ module Mongoid #:nodoc
       # exist. Currently this is only _type.
       def add_indexes
         if hereditary && !indexed && Mongoid.autocreate_indexes
-          self._collection.create_index(:_type, :unique => false, :background => true)
+          # self._collection.create_index(:_type, :unique => false, :background => true)
           self.indexed = true
         end
       end
